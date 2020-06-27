@@ -1,0 +1,623 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "/login/password",
+            "request": {
+                "url": "https://mubu.com/login/password",
+                "method": "GET",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-dest": "document",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "navigate",
+                    "sec-fetch-user": "?1"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/hm.gif",
+            "request": {
+                "url": "https://hm.baidu.com/hm.gif",
+                "params": {
+                    "hca": "B59A812D4E3E30B7",
+                    "cc": "1",
+                    "ck": "1",
+                    "cl": "24-bit",
+                    "ds": "1366x768",
+                    "vl": "625",
+                    "ep": "10745,7018",
+                    "et": "3",
+                    "ja": "0",
+                    "ln": "zh-cn",
+                    "lo": "0",
+                    "lt": "1587915370",
+                    "rnd": "1930896973",
+                    "si": "4426cbb0486a79ea049b4ad52d81b504",
+                    "su": "https://mubu.com/",
+                    "v": "1.2.74",
+                    "lv": "2",
+                    "sn": "3925",
+                    "r": "0",
+                    "ww": "1366"
+                },
+                "method": "GET",
+                "headers": {
+                    "Sec-Fetch-Dest": "empty",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "Sec-Fetch-Site": "cross-site",
+                    "Sec-Fetch-Mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "image/gif"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/collect",
+            "request": {
+                "url": "https://www.google-analytics.com/collect",
+                "params": {
+                    "v": "1",
+                    "_v": "j81",
+                    "a": "1853089449",
+                    "t": "pageview",
+                    "_s": "1",
+                    "dl": "https://mubu.com/login/password",
+                    "ul": "zh-cn",
+                    "de": "UTF-8",
+                    "dt": "登录幕布",
+                    "sd": "24-bit",
+                    "sr": "1366x768",
+                    "vp": "1366x625",
+                    "je": "0",
+                    "_u": "AACAAEAB~",
+                    "jid": "",
+                    "gjid": "",
+                    "cid": "271625959.1565968885",
+                    "tid": "UA-77727571-1",
+                    "_gid": "944396468.1587915370",
+                    "z": "483017167"
+                },
+                "method": "GET",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-dest": "image",
+                    "sec-fetch-site": "cross-site",
+                    "sec-fetch-mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/log/sentry/v2/api/slardar/main/",
+            "request": {
+                "url": "https://i.snssdk.com/log/sentry/v2/api/slardar/main/",
+                "params": {
+                    "ev_type": "pageview",
+                    "version": "2.1.21",
+                    "hostname": "mubu.com",
+                    "protocol": "https",
+                    "url": "https://mubu.com/login/password",
+                    "slardar_session_id": "89c81b8c-f80c-4f44-9a41-ad25213ef271",
+                    "sample_rate": "1",
+                    "pid": "/login/password",
+                    "report_domain": "i.snssdk.com",
+                    "screen_resolution": "1366x768",
+                    "network_type": "4g",
+                    "bid": "mubu_web",
+                    "context": "{}",
+                    "slardar_web_id": "b014de16-3dba-4e07-ae9e-4e959e42d5d1",
+                    "timestamp": "1587916986499"
+                },
+                "method": "GET",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-dest": "empty",
+                    "sec-fetch-site": "cross-site",
+                    "sec-fetch-mode": "cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        204
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/hm.gif",
+            "request": {
+                "url": "https://hm.baidu.com/hm.gif",
+                "params": {
+                    "hca": "B59A812D4E3E30B7",
+                    "cc": "1",
+                    "ck": "1",
+                    "cl": "24-bit",
+                    "ds": "1366x768",
+                    "vl": "625",
+                    "ep": "10745,7018",
+                    "et": "3",
+                    "ja": "0",
+                    "ln": "zh-cn",
+                    "lo": "0",
+                    "lt": "1587915370",
+                    "rnd": "1930896973",
+                    "si": "4426cbb0486a79ea049b4ad52d81b504",
+                    "su": "https://mubu.com/",
+                    "v": "1.2.74",
+                    "lv": "2",
+                    "sn": "3925",
+                    "r": "0",
+                    "ww": "1366",
+                    "u": "https://mubu.com/login"
+                },
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "Sec-Fetch-Dest": "image",
+                    "Sec-Fetch-Site": "cross-site",
+                    "Sec-Fetch-Mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "image/gif"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/hm.gif",
+            "request": {
+                "url": "https://hm.baidu.com/hm.gif",
+                "params": {
+                    "cc": "1",
+                    "ck": "1",
+                    "cl": "24-bit",
+                    "ds": "1366x768",
+                    "vl": "625",
+                    "et": "0",
+                    "ja": "0",
+                    "ln": "zh-cn",
+                    "lo": "0",
+                    "lt": "1587915370",
+                    "rnd": "1153530876",
+                    "si": "4426cbb0486a79ea049b4ad52d81b504",
+                    "su": "https://mubu.com/login",
+                    "v": "1.2.74",
+                    "lv": "2",
+                    "sn": "3937",
+                    "r": "0",
+                    "ww": "1366",
+                    "ct": "!!",
+                    "tt": "登录幕布"
+                },
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "Sec-Fetch-Dest": "image",
+                    "Sec-Fetch-Site": "cross-site",
+                    "Sec-Fetch-Mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "image/gif"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/api/login/submit",
+            "request": {
+                "url": "https://mubu.com/api/login/submit",
+                "method": "POST",
+                "headers": {
+                    "sec-fetch-dest": "empty",
+                    "x-requested-with": "XMLHttpRequest",
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors"
+                },
+                "data": {
+                    "phone": "15820723515",
+                    "password": "101402108mynba",
+                    "remember": "true"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.msg",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/list",
+            "request": {
+                "url": "https://mubu.com/list",
+                "method": "GET",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-dest": "document",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "navigate",
+                    "sec-fetch-user": "?1"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/hm.gif",
+            "request": {
+                "url": "https://hm.baidu.com/hm.gif",
+                "params": {
+                    "hca": "B59A812D4E3E30B7",
+                    "cc": "1",
+                    "ck": "1",
+                    "cl": "24-bit",
+                    "ds": "1366x768",
+                    "vl": "625",
+                    "ep": "1991,1990",
+                    "et": "3",
+                    "ja": "0",
+                    "ln": "zh-cn",
+                    "lo": "0",
+                    "lt": "1587915370",
+                    "rnd": "1312994134",
+                    "si": "4426cbb0486a79ea049b4ad52d81b504",
+                    "su": "https://mubu.com/login",
+                    "v": "1.2.74",
+                    "lv": "2",
+                    "sn": "3937",
+                    "r": "0",
+                    "ww": "1366"
+                },
+                "method": "GET",
+                "headers": {
+                    "Sec-Fetch-Dest": "empty",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "Sec-Fetch-Site": "cross-site",
+                    "Sec-Fetch-Mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "image/gif"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/api/list/tip_new_update",
+            "request": {
+                "url": "https://mubu.com/api/list/tip_new_update",
+                "method": "POST",
+                "headers": {
+                    "sec-fetch-dest": "empty",
+                    "x-requested-with": "XMLHttpRequest",
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors"
+                },
+                "data": ""
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.msg",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/api/list/get",
+            "request": {
+                "url": "https://mubu.com/api/list/get",
+                "method": "POST",
+                "headers": {
+                    "sec-fetch-dest": "empty",
+                    "x-requested-with": "XMLHttpRequest",
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors"
+                },
+                "data": {
+                    "folderId": "0",
+                    "sort": "time",
+                    "keywords": "",
+                    "source": ""
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.msg",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/api/message/get_message_unread",
+            "request": {
+                "url": "https://mubu.com/api/message/get_message_unread",
+                "method": "POST",
+                "headers": {
+                    "sec-fetch-dest": "empty",
+                    "x-requested-with": "XMLHttpRequest",
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors"
+                },
+                "data": ""
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.code",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.msg",
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/collect",
+            "request": {
+                "url": "https://www.google-analytics.com/collect",
+                "params": {
+                    "v": "1",
+                    "_v": "j81",
+                    "a": "1206172367",
+                    "t": "pageview",
+                    "_s": "1",
+                    "dl": "https://mubu.com/list",
+                    "ul": "zh-cn",
+                    "de": "UTF-8",
+                    "dt": "我的文档 - 幕布",
+                    "sd": "24-bit",
+                    "sr": "1366x768",
+                    "vp": "1366x625",
+                    "je": "0",
+                    "_u": "AACAAEAB~",
+                    "jid": "",
+                    "gjid": "",
+                    "cid": "271625959.1565968885",
+                    "tid": "UA-77727571-1",
+                    "_gid": "944396468.1587915370",
+                    "z": "2049972381"
+                },
+                "method": "GET",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "sec-fetch-dest": "image",
+                    "sec-fetch-site": "cross-site",
+                    "sec-fetch-mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/hm.gif",
+            "request": {
+                "url": "https://hm.baidu.com/hm.gif",
+                "params": {
+                    "hca": "B59A812D4E3E30B7",
+                    "cc": "1",
+                    "ck": "1",
+                    "cl": "24-bit",
+                    "ds": "1366x768",
+                    "vl": "625",
+                    "ep": "1991,1990",
+                    "et": "3",
+                    "ja": "0",
+                    "ln": "zh-cn",
+                    "lo": "0",
+                    "lt": "1587915370",
+                    "rnd": "1312994134",
+                    "si": "4426cbb0486a79ea049b4ad52d81b504",
+                    "su": "https://mubu.com/login",
+                    "v": "1.2.74",
+                    "lv": "2",
+                    "sn": "3937",
+                    "r": "0",
+                    "ww": "1366",
+                    "u": "https://mubu.com/login/password"
+                },
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "Sec-Fetch-Dest": "image",
+                    "Sec-Fetch-Site": "cross-site",
+                    "Sec-Fetch-Mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "image/gif"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/hm.gif",
+            "request": {
+                "url": "https://hm.baidu.com/hm.gif",
+                "params": {
+                    "cc": "1",
+                    "ck": "1",
+                    "cl": "24-bit",
+                    "ds": "1366x768",
+                    "vl": "625",
+                    "et": "0",
+                    "ja": "0",
+                    "ln": "zh-cn",
+                    "lo": "0",
+                    "lt": "1587915370",
+                    "rnd": "1177156800",
+                    "si": "4426cbb0486a79ea049b4ad52d81b504",
+                    "su": "https://mubu.com/login/password",
+                    "v": "1.2.74",
+                    "lv": "2",
+                    "sn": "3939",
+                    "r": "0",
+                    "ww": "1366",
+                    "ct": "!!",
+                    "tt": "我的文档 - 幕布"
+                },
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+                    "Sec-Fetch-Dest": "image",
+                    "Sec-Fetch-Site": "cross-site",
+                    "Sec-Fetch-Mode": "no-cors"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "image/gif"
+                    ]
+                }
+            ]
+        }
+    ]
+}

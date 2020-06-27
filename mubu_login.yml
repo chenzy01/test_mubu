@@ -1,0 +1,461 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /login/password
+    request:
+        headers:
+            sec-fetch-dest: document
+            sec-fetch-mode: navigate
+            sec-fetch-site: same-origin
+            sec-fetch-user: ?1
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        url: https://mubu.com/login/password
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /hm.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: empty
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: cross-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            cc: '1'
+            ck: '1'
+            cl: 24-bit
+            ds: 1366x768
+            ep: 10745,7018
+            et: '3'
+            hca: B59A812D4E3E30B7
+            ja: '0'
+            ln: zh-cn
+            lo: '0'
+            lt: '1587915370'
+            lv: '2'
+            r: '0'
+            rnd: '1930896973'
+            si: 4426cbb0486a79ea049b4ad52d81b504
+            sn: '3925'
+            su: https://mubu.com/
+            v: 1.2.74
+            vl: '625'
+            ww: '1366'
+        url: https://hm.baidu.com/hm.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /collect
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: cross-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            _gid: '944396468.1587915370'
+            _s: '1'
+            _u: AACAAEAB~
+            _v: j81
+            a: '1853089449'
+            cid: '271625959.1565968885'
+            de: UTF-8
+            dl: https://mubu.com/login/password
+            dt: 登录幕布
+            gjid: ''
+            je: '0'
+            jid: ''
+            sd: 24-bit
+            sr: 1366x768
+            t: pageview
+            tid: UA-77727571-1
+            ul: zh-cn
+            v: '1'
+            vp: 1366x625
+            z: '483017167'
+        url: https://www.google-analytics.com/collect
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /log/sentry/v2/api/slardar/main/
+    request:
+        headers:
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: cross-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            bid: mubu_web
+            context: '{}'
+            ev_type: pageview
+            hostname: mubu.com
+            network_type: 4g
+            pid: /login/password
+            protocol: https
+            report_domain: i.snssdk.com
+            sample_rate: '1'
+            screen_resolution: 1366x768
+            slardar_session_id: 89c81b8c-f80c-4f44-9a41-ad25213ef271
+            slardar_web_id: b014de16-3dba-4e07-ae9e-4e959e42d5d1
+            timestamp: '1587916986499'
+            url: https://mubu.com/login/password
+            version: 2.1.21
+        url: https://i.snssdk.com/log/sentry/v2/api/slardar/main/
+    validate:
+    -   eq:
+        - status_code
+        - 204
+-   name: /hm.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: cross-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            cc: '1'
+            ck: '1'
+            cl: 24-bit
+            ds: 1366x768
+            ep: 10745,7018
+            et: '3'
+            hca: B59A812D4E3E30B7
+            ja: '0'
+            ln: zh-cn
+            lo: '0'
+            lt: '1587915370'
+            lv: '2'
+            r: '0'
+            rnd: '1930896973'
+            si: 4426cbb0486a79ea049b4ad52d81b504
+            sn: '3925'
+            su: https://mubu.com/
+            u: https://mubu.com/login
+            v: 1.2.74
+            vl: '625'
+            ww: '1366'
+        url: https://hm.baidu.com/hm.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /hm.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: cross-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            cc: '1'
+            ck: '1'
+            cl: 24-bit
+            ct: '!!'
+            ds: 1366x768
+            et: '0'
+            ja: '0'
+            ln: zh-cn
+            lo: '0'
+            lt: '1587915370'
+            lv: '2'
+            r: '0'
+            rnd: '1153530876'
+            si: 4426cbb0486a79ea049b4ad52d81b504
+            sn: '3937'
+            su: https://mubu.com/login
+            tt: 登录幕布
+            v: 1.2.74
+            vl: '625'
+            ww: '1366'
+        url: https://hm.baidu.com/hm.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /api/login/submit
+    request:
+        data:
+            password: 101402108mynba
+            phone: '15820723515'
+            remember: 'true'
+        headers:
+            content-type: application/x-www-form-urlencoded; charset=UTF-8
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+            x-requested-with: XMLHttpRequest
+        method: POST
+        url: https://mubu.com/api/login/submit
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - null
+-   name: /list
+    request:
+        headers:
+            sec-fetch-dest: document
+            sec-fetch-mode: navigate
+            sec-fetch-site: same-origin
+            sec-fetch-user: ?1
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        url: https://mubu.com/list
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /hm.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: empty
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: cross-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            cc: '1'
+            ck: '1'
+            cl: 24-bit
+            ds: 1366x768
+            ep: 1991,1990
+            et: '3'
+            hca: B59A812D4E3E30B7
+            ja: '0'
+            ln: zh-cn
+            lo: '0'
+            lt: '1587915370'
+            lv: '2'
+            r: '0'
+            rnd: '1312994134'
+            si: 4426cbb0486a79ea049b4ad52d81b504
+            sn: '3937'
+            su: https://mubu.com/login
+            v: 1.2.74
+            vl: '625'
+            ww: '1366'
+        url: https://hm.baidu.com/hm.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /api/list/tip_new_update
+    request:
+        data: ''
+        headers:
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+            x-requested-with: XMLHttpRequest
+        method: POST
+        url: https://mubu.com/api/list/tip_new_update
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - null
+-   name: /api/list/get
+    request:
+        data:
+            folderId: '0'
+            keywords: ''
+            sort: time
+            source: ''
+        headers:
+            content-type: application/x-www-form-urlencoded; charset=UTF-8
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+            x-requested-with: XMLHttpRequest
+        method: POST
+        url: https://mubu.com/api/list/get
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - null
+-   name: /api/message/get_message_unread
+    request:
+        data: ''
+        headers:
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+            x-requested-with: XMLHttpRequest
+        method: POST
+        url: https://mubu.com/api/message/get_message_unread
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - null
+-   name: /collect
+    request:
+        headers:
+            sec-fetch-dest: image
+            sec-fetch-mode: no-cors
+            sec-fetch-site: cross-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            _gid: '944396468.1587915370'
+            _s: '1'
+            _u: AACAAEAB~
+            _v: j81
+            a: '1206172367'
+            cid: '271625959.1565968885'
+            de: UTF-8
+            dl: https://mubu.com/list
+            dt: 我的文档 - 幕布
+            gjid: ''
+            je: '0'
+            jid: ''
+            sd: 24-bit
+            sr: 1366x768
+            t: pageview
+            tid: UA-77727571-1
+            ul: zh-cn
+            v: '1'
+            vp: 1366x625
+            z: '2049972381'
+        url: https://www.google-analytics.com/collect
+    validate:
+    -   eq:
+        - status_code
+        - 200
+-   name: /hm.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: cross-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            cc: '1'
+            ck: '1'
+            cl: 24-bit
+            ds: 1366x768
+            ep: 1991,1990
+            et: '3'
+            hca: B59A812D4E3E30B7
+            ja: '0'
+            ln: zh-cn
+            lo: '0'
+            lt: '1587915370'
+            lv: '2'
+            r: '0'
+            rnd: '1312994134'
+            si: 4426cbb0486a79ea049b4ad52d81b504
+            sn: '3937'
+            su: https://mubu.com/login
+            u: https://mubu.com/login/password
+            v: 1.2.74
+            vl: '625'
+            ww: '1366'
+        url: https://hm.baidu.com/hm.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
+-   name: /hm.gif
+    request:
+        headers:
+            Sec-Fetch-Dest: image
+            Sec-Fetch-Mode: no-cors
+            Sec-Fetch-Site: cross-site
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+        method: GET
+        params:
+            cc: '1'
+            ck: '1'
+            cl: 24-bit
+            ct: '!!'
+            ds: 1366x768
+            et: '0'
+            ja: '0'
+            ln: zh-cn
+            lo: '0'
+            lt: '1587915370'
+            lv: '2'
+            r: '0'
+            rnd: '1177156800'
+            si: 4426cbb0486a79ea049b4ad52d81b504
+            sn: '3939'
+            su: https://mubu.com/login/password
+            tt: 我的文档 - 幕布
+            v: 1.2.74
+            vl: '625'
+            ww: '1366'
+        url: https://hm.baidu.com/hm.gif
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - image/gif
